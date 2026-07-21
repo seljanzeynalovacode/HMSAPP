@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <title>Yeni Həkim Əlavə Et</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<div class="card">
+    <a href="index.html" class="btn-back">← Siyahıya geri qayıt</a>
+    <h2>➕ Yeni Həkim Əlavə Et</h2><br>
+
+    <form id="createForm" class="form-grid">
+        <div class="input-group"><label>Ad</label><input type="text" id="name" required placeholder="Əli"></div>
+        <div class="input-group"><label>Soyad</label><input type="text" id="surname" required placeholder="Əliyev"></div>
+        <div class="input-group"><label>E-poçt</label><input type="email" id="email" required placeholder="ali@mail.com"></div>
+        <div class="input-group"><label>Telefon</label><input type="tel" id="phone" required placeholder="+994501234567"></div>
+        <div class="input-group"><label>İxtisas</label><input type="text" id="specialty" required placeholder="Kardioloq"></div>
+        <div class="input-group"><label>Lisenziya №</label><input type="text" id="licenseNumber" required placeholder="LIC-12345"></div>
+        <div class="input-group"><label>Klinika Ünvanı</label><input type="text" id="clinicAddress" required placeholder="Bakı ş."></div>
+        <div class="input-group"><label>Klinika Tel</label><input type="tel" id="clinicPhoneNumber" required placeholder="+994124000000"></div>
+        
+        <div class="full-width">
+            <button type="submit" class="btn btn-save">Həkimi Yadda Saxla</button>
+        </div>
+    </form>
+</div>
+
+<script src="./javascripts/create.js"></script>
+</body>
+</html>

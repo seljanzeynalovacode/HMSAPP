@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HMSAPP.Persistance.Migrations
 {
     [DbContext(typeof(HSDbContext))]
-    [Migration("20260718155154_initDb")]
+    [Migration("20260721121029_initDb")]
     partial class initDb
     {
         /// <inheritdoc />

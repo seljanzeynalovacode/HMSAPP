@@ -1,4 +1,4 @@
-
+﻿
 using HMSAPP.Application.Mapper;
 using HMSAPP.Application.Services;
 using HMSAPP.Contract.Abstractions;
@@ -44,7 +44,20 @@ namespace HMSAPP.WebAPI
 
             builder.Services.AddScoped<IDoctorService, DoctorService>();
 
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll", builder =>
+                {
+                    builder.AllowAnyOrigin()   // Bütün domenlərə icazə ver
+                           .AllowAnyMethod()   // POST, GET, PUT, DELETE icazə ver
+                           .AllowAnyHeader();  // Bütün header-lərə icazə ver
+                });
+            });
+
             var app = builder.Build();
+
+            app.UseCors("AllowAll");
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
